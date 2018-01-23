@@ -55,6 +55,7 @@ type Client struct {
 	Ip          *LinodeIPService
 	Disk        *LinodeDiskService
 	StackScript *StackScriptService
+	Volume      *LinodeVolumeService
 }
 
 // Creates a new Linode client object.
@@ -81,6 +82,7 @@ func NewClient(AccessKey string, httpClient *http.Client) *Client {
 	c.Job = &LinodeJobService{client: c}
 	c.Disk = &LinodeDiskService{client: c}
 	c.StackScript = &StackScriptService{client: c}
+	c.Volume = &LinodeVolumeService{client: c}
 	return c
 }
 

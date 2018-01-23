@@ -219,3 +219,15 @@ type LinodeIPAddress struct {
 	IPAddress   string `json:"IPADDRESS"`
 	IPAddressId int    `json:"IPADDRESSID"`
 }
+
+type Volume struct {
+	VolumeId int          `json:"VOLUMEID"`
+	Label    CustomString `json:"LABEL"`
+	Size     int          `json:"SIZE"`
+	LinodeId int          `json:"LINODEID"`
+	Status   string       `json:"STATUS"`
+}
+
+type VolumeId struct {
+	VolumeId int `json:"VOLUMEID"`
+}
