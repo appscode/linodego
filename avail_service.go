@@ -7,7 +7,7 @@ import (
 )
 
 // AvailService is an interface generated for "github.com/appscode/linodego".AvailService.
-type AvailServiceImpl interface {
+type AvailInterface interface {
 	DataCenters() (*AvailDataCentersResponse, error)
 	Distributions() (*AvailDistributionsResponse, error)
 	FilterKernels(int, int) (*KernelsResponse, error)
@@ -22,7 +22,7 @@ type AvailService struct {
 	client *Client
 }
 
-var _ AvailServiceImpl = &AvailService{}
+var _ AvailInterface = &AvailService{}
 
 // Response for avail.datacenters API
 type AvailDataCentersResponse struct {

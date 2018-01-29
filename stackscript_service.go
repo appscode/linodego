@@ -7,7 +7,7 @@ import (
 )
 
 // StackScriptService is an interface generated for "github.com/appscode/linodego".StackScriptService.
-type StackScriptServiceImpl interface {
+type StackScriptInterface interface {
 	Create(string, string, string, map[string]string) (*StackScriptResponse, error)
 	Delete(int) (*StackScriptResponse, error)
 	List(int) (*StackScriptListResponse, error)
@@ -19,7 +19,7 @@ type StackScriptService struct {
 	client *Client
 }
 
-var _ StackScriptServiceImpl = &StackScriptService{}
+var _ StackScriptInterface = &StackScriptService{}
 
 // Response for linode.config.list API
 type StackScriptListResponse struct {

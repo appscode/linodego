@@ -8,7 +8,7 @@ import (
 )
 
 // LinodeService is an interface generated for "github.com/appscode/linodego".LinodeService.
-type LinodeServiceImpl interface {
+type LinodeInterface interface {
 	Boot(int, int) (*JobResponse, error)
 	Clone(int, int, int, int) (*LinodeResponse, error)
 	Create(int, int, int) (*LinodeResponse, error)
@@ -25,7 +25,7 @@ type LinodeService struct {
 	client *Client
 }
 
-var _ LinodeServiceImpl = &LinodeService{}
+var _ LinodeInterface = &LinodeService{}
 
 // Response for linode.list API
 type LinodesListResponse struct {

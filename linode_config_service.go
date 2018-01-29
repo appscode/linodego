@@ -7,7 +7,7 @@ import (
 )
 
 // LinodeConfigService is an interface generated for "github.com/appscode/linodego".LinodeConfigService.
-type LinodeConfigServiceImpl interface {
+type LinodeConfigInterface interface {
 	Create(int, int, string, map[string]string) (*LinodeConfigResponse, error)
 	Delete(int, int) (*LinodeConfigResponse, error)
 	List(int, int) (*LinodeConfigListResponse, error)
@@ -19,7 +19,7 @@ type LinodeConfigService struct {
 	client *Client
 }
 
-var _ LinodeConfigServiceImpl = &LinodeConfigService{}
+var _ LinodeConfigInterface = &LinodeConfigService{}
 
 // Response for linode.config.list API
 type LinodeConfigListResponse struct {

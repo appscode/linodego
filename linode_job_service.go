@@ -7,7 +7,7 @@ import (
 )
 
 // LinodeJobService is an interface generated for "github.com/appscode/linodego".LinodeJobService.
-type LinodeJobServiceImpl interface {
+type LinodeJobInterface interface {
 	List(int, int, bool) (*LinodesJobListResponse, error)
 }
 
@@ -16,7 +16,7 @@ type LinodeJobService struct {
 	client *Client
 }
 
-var _ LinodeJobServiceImpl = &LinodeJobService{}
+var _ LinodeJobInterface = &LinodeJobService{}
 
 // Resonse for linode.job.list API
 type LinodesJobListResponse struct {

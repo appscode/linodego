@@ -7,7 +7,7 @@ import (
 )
 
 // ImageService is an interface generated for "github.com/appscode/linodego".ImageService.
-type ImageServiceImpl interface {
+type ImageInterface interface {
 	Delete(int) (*ImageResponse, error)
 	List() (*ImagesListResponse, error)
 	Update(int, string, string) (*ImageResponse, error)
@@ -18,7 +18,7 @@ type ImageService struct {
 	client *Client
 }
 
-var _ ImageServiceImpl = &ImageService{}
+var _ ImageInterface = &ImageService{}
 
 // Response for image.list API
 type ImagesListResponse struct {

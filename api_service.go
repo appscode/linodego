@@ -6,7 +6,7 @@ import (
 )
 
 // ApiService is an interface generated for "github.com/appscode/linodego".ApiService.
-type ApiServiceImpl interface {
+type ApiInterface interface {
 	Spec(*ApiResponse) error
 }
 
@@ -15,7 +15,7 @@ type ApiService struct {
 	client *Client
 }
 
-var _ ApiServiceImpl = &ApiService{}
+var _ ApiInterface = &ApiService{}
 
 // Response for api.spec Service
 type ApiResponse struct {

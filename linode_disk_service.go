@@ -7,7 +7,7 @@ import (
 )
 
 // LinodeDiskService is an interface generated for "github.com/appscode/linodego".LinodeDiskService.
-type LinodeDiskServiceImpl interface {
+type LinodeDiskInterface interface {
 	Create(int, string, string, int, map[string]string) (*LinodeDiskJobResponse, error)
 	CreateFromDistribution(int, int, string, int, map[string]string) (*LinodeDiskJobResponse, error)
 	CreateFromImage(int, int, string, int, map[string]string) (*LinodeDiskJobResponse, error)
@@ -25,7 +25,7 @@ type LinodeDiskService struct {
 	client *Client
 }
 
-var _ LinodeDiskServiceImpl = &LinodeDiskService{}
+var _ LinodeDiskInterface = &LinodeDiskService{}
 
 // Response for linode.disk.list API
 type LinodeDiskListResponse struct {

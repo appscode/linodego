@@ -44,21 +44,21 @@ type Client struct {
 	UsePost bool
 
 	// Services
-	Test        TestServiceImpl
-	Api         ApiServiceImpl
-	Avail       AvailServiceImpl
-	Account     AccountServiceImpl
-	Image       ImageServiceImpl
-	Linode      LinodeServiceImpl
-	Job         LinodeJobServiceImpl
-	Config      LinodeConfigServiceImpl
-	Ip          LinodeIPServiceImpl
-	Disk        LinodeDiskServiceImpl
-	StackScript StackScriptServiceImpl
-	Volume      LinodeVolumeServiceImpl
-	NodeBalancer NodeBalancerServiceImpl
-	NodeBalancerConfig NodeBalancerConfigServiceImpl
-	Node NodeBalancerNodeServiceImpl
+	Test               TestInterface
+	Api                ApiInterface
+	Avail              AvailInterface
+	Account            AccountInterface
+	Image              ImageInterface
+	Linode             LinodeInterface
+	Job                LinodeJobInterface
+	Config             LinodeConfigInterface
+	Ip                 LinodeIPInterface
+	Disk               LinodeDiskInterface
+	StackScript        StackScriptInterface
+	Volume             LinodeVolumeInterface
+	NodeBalancer       NodeBalancerInterface
+	NodeBalancerConfig NodeBalancerConfigInterface
+	Node               NodeBalancerNodeInterface
 }
 
 // Creates a new Linode client object.

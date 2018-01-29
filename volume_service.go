@@ -7,7 +7,7 @@ import (
 )
 
 // LinodeVolumeService is an interface generated for "github.com/appscode/linodego".LinodeVolumeService.
-type LinodeVolumeServiceImpl interface {
+type LinodeVolumeInterface interface {
 	Clone(int, string) (*LinodeVolumeResponse, error)
 	Create(int, string, map[string]string) (*LinodeVolumeResponse, error)
 	Delete(int) (*LinodeVolumeResponse, error)
@@ -20,7 +20,7 @@ type LinodeVolumeService struct {
 	client *Client
 }
 
-var _ LinodeVolumeServiceImpl = &LinodeVolumeService{}
+var _ LinodeVolumeInterface = &LinodeVolumeService{}
 
 // Response for volume.list API
 type LinodeVolumeListResponse struct {

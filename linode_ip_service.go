@@ -7,7 +7,7 @@ import (
 )
 
 // LinodeIPService is an interface generated for "github.com/appscode/linodego".LinodeIPService.
-type LinodeIPServiceImpl interface {
+type LinodeIPInterface interface {
 	AddPrivate(int) (*LinodeIPAddressResponse, error)
 	AddPublic(int) (*LinodeIPAddressResponse, error)
 	List(int, int) (*LinodeIPListResponse, error)
@@ -20,7 +20,7 @@ type LinodeIPService struct {
 	client *Client
 }
 
-var _ LinodeIPServiceImpl = &LinodeIPService{}
+var _ LinodeIPInterface = &LinodeIPService{}
 
 // IP List Response
 type LinodeIPListResponse struct {

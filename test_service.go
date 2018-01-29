@@ -6,7 +6,7 @@ import (
 )
 
 // TestService is an interface generated for "github.com/appscode/linodego".TestService.
-type TestServiceImpl interface {
+type TestInterface interface {
 	Echo(string, string, *TestResponse) error
 }
 
@@ -16,7 +16,7 @@ type TestService struct {
 	client *Client
 }
 
-var _ TestServiceImpl = &TestService{}
+var _ TestInterface = &TestService{}
 
 // Test Service Response
 type TestResponse struct {
