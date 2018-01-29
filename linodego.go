@@ -86,9 +86,9 @@ func NewClient(AccessKey string, httpClient *http.Client) *Client {
 	c.Disk = &LinodeDiskService{client: c}
 	c.StackScript = &StackScriptService{client: c}
 	c.Volume = &LinodeVolumeService{client: c}
-	c.NodeBalancer = &NodeBalancerService{client:c}
+	c.NodeBalancer = &NodeBalancerService{client: c}
 	c.NodeBalancerConfig = &NodeBalancerConfigService{client: c}
-	c.Node = &NodeBalancerNodeService{client:c}
+	c.Node = &NodeBalancerNodeService{client: c}
 	return c
 }
 

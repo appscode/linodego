@@ -10,7 +10,6 @@ type TestInterface interface {
 	Echo(string, string, *TestResponse) error
 }
 
-
 // Test Service
 type TestService struct {
 	client *Client

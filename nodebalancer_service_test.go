@@ -1,8 +1,8 @@
 package linodego
 
 import (
-	"testing"
 	"fmt"
+	"testing"
 )
 
 func TestListNB(t *testing.T) {

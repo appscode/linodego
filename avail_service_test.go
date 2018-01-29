@@ -1,8 +1,9 @@
 package linodego
 
 import (
-	log "github.com/sirupsen/logrus"
 	"testing"
+
+	log "github.com/sirupsen/logrus"
 )
 
 func TestAvailDataCenters(t *testing.T) {

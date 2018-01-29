@@ -28,13 +28,11 @@ type LinodeVolumeListResponse struct {
 	Volume []Volume
 }
 
-
 // Response for general config APIs
 type LinodeVolumeResponse struct {
 	Response
 	VolumeId StackScriptId
 }
-
 
 // List all volumes. If volumeId is greater than 0, limit the results to given volume.
 func (t *LinodeVolumeService) List(volumeId int) (*LinodeVolumeListResponse, error) {
@@ -55,7 +53,7 @@ func (t *LinodeVolumeService) List(volumeId int) (*LinodeVolumeListResponse, err
 }
 
 // Create Volume
-func (t *LinodeVolumeService) Create(size int,label string, args map[string]string) (*LinodeVolumeResponse, error) {
+func (t *LinodeVolumeService) Create(size int, label string, args map[string]string) (*LinodeVolumeResponse, error) {
 	u := &url.Values{}
 	u.Add("Size", strconv.Itoa(size))
 	u.Add("Label", label)
@@ -88,8 +86,6 @@ func (t *LinodeVolumeService) Update(volumeId int, args map[string]string) (*Lin
 	}
 	return &v, nil
 }
-
-
 
 // Delete Volume
 func (t *LinodeVolumeService) Delete(volumeId int) (*LinodeVolumeResponse, error) {

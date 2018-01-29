@@ -1,8 +1,8 @@
 package linodego
 
 import (
-	"testing"
 	"fmt"
+	"testing"
 )
 
 func TestListVolume(t *testing.T) {
@@ -17,7 +17,7 @@ func TestCreateVolume(t *testing.T) {
 	args := map[string]string{
 		"DatacenterID": "3",
 	}
-	resp, err := client.Volume.Create(10,"apitest",args)
+	resp, err := client.Volume.Create(10, "apitest", args)
 	fmt.Println(err, resp)
 
 }

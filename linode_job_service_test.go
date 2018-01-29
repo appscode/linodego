@@ -1,8 +1,9 @@
 package linodego
 
 import (
-	_ "github.com/sirupsen/logrus"
 	"testing"
+
+	_ "github.com/sirupsen/logrus"
 )
 
 func TestListJobs(t *testing.T) {

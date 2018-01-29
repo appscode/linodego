@@ -102,4 +102,3 @@ func (t *NodeBalancerConfigService) Delete(nodeBalancerId int, configId int) (*N
 	}
 	return &v, nil
 }
-

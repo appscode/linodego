@@ -1,7 +1,5 @@
 package linodego
 
-import ()
-
 // CustomString is an interface generated for "github.com/appscode/linodego".CustomString.
 type CustomStringImpl interface {
 	MarshalJSON() ([]byte, error)
