@@ -6,10 +6,19 @@ import (
 	"strconv"
 )
 
+// ImageService is an interface generated for "github.com/appscode/linodego".ImageService.
+type ImageServiceImpl interface {
+	Delete(int) (*ImageResponse, error)
+	List() (*ImagesListResponse, error)
+	Update(int, string, string) (*ImageResponse, error)
+}
+
 // Image Service
 type ImageService struct {
 	client *Client
 }
+
+var _ ImageServiceImpl = &ImageService{}
 
 // Response for image.list API
 type ImagesListResponse struct {

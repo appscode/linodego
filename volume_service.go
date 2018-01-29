@@ -6,11 +6,21 @@ import (
 	"strconv"
 )
 
+// LinodeVolumeService is an interface generated for "github.com/appscode/linodego".LinodeVolumeService.
+type LinodeVolumeServiceImpl interface {
+	Clone(int, string) (*LinodeVolumeResponse, error)
+	Create(int, string, map[string]string) (*LinodeVolumeResponse, error)
+	Delete(int) (*LinodeVolumeResponse, error)
+	List(int) (*LinodeVolumeListResponse, error)
+	Update(int, map[string]string) (*LinodeVolumeResponse, error)
+}
 
 // Linode Volume Service
 type LinodeVolumeService struct {
 	client *Client
 }
+
+var _ LinodeVolumeServiceImpl = &LinodeVolumeService{}
 
 // Response for volume.list API
 type LinodeVolumeListResponse struct {

@@ -2,12 +2,21 @@ package linodego
 
 import ()
 
+// CustomString is an interface generated for "github.com/appscode/linodego".CustomString.
+type CustomStringImpl interface {
+	MarshalJSON() ([]byte, error)
+	String() string
+	UnmarshalJSON([]byte) error
+}
+
 // A special class to handle marshaling string response from Linode
 // As sometimes Linode returns integer instead of string from API
 // https://github.com/taoh/linodego/issues/1
 type CustomString struct {
 	string
 }
+
+var _ CustomStringImpl = &CustomString{}
 
 func (cs *CustomString) UnmarshalJSON(b []byte) (err error) {
 	// if bytes are not surrounded by double quotes

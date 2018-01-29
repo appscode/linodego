@@ -5,10 +5,18 @@ import (
 	"net/url"
 )
 
+// TestService is an interface generated for "github.com/appscode/linodego".TestService.
+type TestServiceImpl interface {
+	Echo(string, string, *TestResponse) error
+}
+
+
 // Test Service
 type TestService struct {
 	client *Client
 }
+
+var _ TestServiceImpl = &TestService{}
 
 // Test Service Response
 type TestResponse struct {
